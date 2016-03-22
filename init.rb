@@ -80,7 +80,7 @@ private
     if (uri = URI.parse(db_name)).scheme
       "#{uri.path[1..-1]} on #{uri.host||"localhost"}:#{uri.port||5432}"
     else
-      "#{hpg_resolve(db_name).config_var} on #{app}.herokuapp.com"
+      db_name
     end
   end
 
